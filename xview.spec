@@ -5,7 +5,7 @@ Summary:	XView libraries for X11
 Summary(pl):	Biblioteki XView dla X11
 Name:		xview
 Version:	%{xview_ver}
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Libraries
 Source0:	%{name}_%{version}.orig.tar.gz
@@ -118,6 +118,9 @@ for dir in olgx olgx_private xview xview_private pixrect; do
 	cp -aL build/include/$dir $RPM_BUILD_ROOT%{_includedir}
 done
 
+ln -sf libolgx.so.3.2.4 $RPM_BUILD_ROOT%{_libdir}/libolgx.so
+ln -sf libxview.so.3.2.4 $RPM_BUILD_ROOT%{_libdir}/libxview.so
+
 cp -ar contrib/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
@@ -133,6 +136,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libolgx.so
+%attr(755,root,root) %{_libdir}/libxview.so
 %{_mandir}/man7/xview.7.*
 %{_includedir}/olgx
 %{_includedir}/olgx_private
