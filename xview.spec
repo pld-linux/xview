@@ -3,31 +3,33 @@ Summary(pl):	XView
 Name:		xview
 Version:	3.2p1
 Release:	1
-Copyright:	GPL
+License:	GPL
 Group:		X11/Libraries
+Group(de):	X11/Libraries
+Group(es):	X11/Bibliotecas
 Group(pl):	X11/Biblioteki
-Source:		ftp://sunsite.unc.edu/pub/X11/contrib/libraries/%name%version-X11R6.tar.gz
-Patch:		xview-config.patch
+Source0:	ftp://sunsite.unc.edu/pub/X11/contrib/libraries/%name%version-X11R6.tar.gz
+Patch0:		%{name}-config.patch
 #BuildRequires:	
 #Requires:	
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	_prefix	/usr/X11R6
+%define		_prefix		/usr/X11R6
 
 %description
 
 %description -l pl
- # optional package =====================
 
 %package devel
 Summary:	XView devel	
 Summary(pl):	Xview devel
 Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
+Group(pl):	X11/Programowanie/Biblioteki
 
 %description devel
 
 %description -l pl devel
- # end of optional package ==============
 
 %prep
 %setup -q
@@ -35,14 +37,14 @@ Group:		X11/Development/Libraries
 %patch
 
 %build
-rm make
-IMAKEINCLUDE="-I$RPM_BUILD_DIR/%name-%version/config -I/usr/X11R6/lib/X11/config"
+rm -f make
+IMAKEINCLUDE="-I$RPM_BUILD_DIR/%name-%version/config -I%{_libdir}/X11/config"
 export IMAKEINCLUDE
 cd config
 imake -DUseInstalled $IMAKEINCLUDE
 cd ..
 xmkmf -a
-%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS" World
+%{__make} RPM_OPT_FLAGS="%{rpmcflags}" World
 
 %install
 rm -rf $RPM_BUILD_ROOT
