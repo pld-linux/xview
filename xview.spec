@@ -22,8 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %package devel
 Summary:	XView devel	
 Summary(pl):	Xview devel
-Group:		XXX
-Group(pl):	XXX
+Group:		X11/Development/Libraries
 
 %description devel
 
