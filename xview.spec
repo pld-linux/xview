@@ -16,8 +16,6 @@ Patch1:		%{name}-ansi.patch
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 XView provides a set of pre-built, user-interface objects such as
