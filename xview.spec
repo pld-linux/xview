@@ -8,13 +8,6 @@ Version:	%{xview_ver}
 Release:	3
 License:	GPL
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Source0:	%{name}_%{version}.orig.tar.gz
 Patch0:		%{name}_%{version}-14.diff.gz
 #original:
@@ -54,13 +47,6 @@ zapewnienia kompatybilno╤ci ze starymi programami.
 Summary:	Header files for XView development
 Summary(pl):	Pliki nagЁСwkowe XView
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -75,13 +61,6 @@ bibliotek XView, zgodnych ze specyfikacj╠ interfejsu OpenLook.
 Summary:	Static libraries for XView development
 Summary(pl):	Biblioteki statyczne XView
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description static
@@ -94,13 +73,6 @@ Biblioteki statyczne XView
 Summary:	A number of example programs and tutorials for the XView libraries
 Summary(pl):	PrzykЁadowe programy i dokumentacja do bibliotek XView
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description examples
