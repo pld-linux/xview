@@ -5,15 +5,14 @@ Summary:	XView libraries for X11
 Summary(pl):	Biblioteki XView dla X11
 Name:		xview
 Version:	%{xview_ver}
-Release:	5
+Release:	6
 License:	GPL
 Group:		Development/Libraries
-#original:
-#Source0:	ftp://sunsite.unc.edu/pub/Linux/libs/X/xview/xview-3.2p1.4.src.tar.gz
-Source0:	%{name}_%{version}.orig.tar.gz
+Source0:	ftp://step.polymtl.ca/pub/Xview/libs/xview/Xview-%{version}/%{name}-%{version}.src.tar.gz
 # Source0-md5:	b9ff26d6ad378af320bac45154ceaeba
-Patch0:		%{name}_%{version}-14.diff.gz
-Patch1:		%{name}-ansi.patch
+# http://ftp.debian.org/debian/pool/main/x/xview/
+Patch0:		%{name}_%{version}-17.diff.gz
+URL:		http://step.polymtl.ca/~coyote/xview_main.html
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -89,7 +88,6 @@ XView.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 rm -f make
