@@ -132,7 +132,7 @@ Version:	4.1
 Group:		X11/Window Managers
 Group(de):	X11/Fenstermanager
 Group(pl):	X11/Zarz±dcy Okien
-Requires:	%{name] = %{version}
+Requires:	%{name} = %{version}
 
 %description -n olvwm
 This package contains an extended version of olwm, the original
