@@ -12,9 +12,8 @@ Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
 Group(ru):	Разработка/Библиотеки
 Group(uk):	Розробка/Б╕бл╕отеки
-# probably taken from Debian, repacked to .bz2
-Source0:	%{name}_%{version}.orig.tar.bz2
-Patch0:		%{name}_%{version}-13.diff.bz2
+Source0:	%{name}_%{version}.orig.tar.gz
+Patch0:		%{name}_%{version}-5.diff.gz
 #original:
 #Source0:	ftp://sunsite.unc.edu:/pub/Linux/libs/X/xview/xview-3.2p1.4.src.tar.gz
 BuildRequires:	XFree86-devel
