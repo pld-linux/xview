@@ -122,7 +122,7 @@ done
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -ar contrib/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-%clean 
+%clean
 rm -rf $RPM_BUILD_ROOT
 
 %post -p /sbin/ldconfig
@@ -132,7 +132,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libolgx.so.*
 %attr(755,root,root) %{_libdir}/libxview.so.*
-	  
+
 %files devel
 %defattr(644,root,root,755)
 %{_mandir}/man7/xview.7.*
@@ -143,6 +143,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/xview_private/*.h
 
 %files static
+%defattr(644,root,root,755)
 %{_libdir}/libolgx.a
 %{_libdir}/libxview.a
 
