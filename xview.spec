@@ -99,47 +99,46 @@ cd config
 imake -DUseInstalled
 cd ..
 xmkmf -a
-%{__make} CCOPTIONS="%{rpmcflags}"
+%{__make} \
+	CC=%{__cc} \
+	CCOPTIONS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_libdir},%{_mandir}/man7,%{_includedir},%{_examplesdir}/%{name}-%{version}}
 
-install -d $RPM_BUILD_ROOT%{_libdir}
 for name in olgx xview; do
 	cp lib/lib$name/lib$name.a $RPM_BUILD_ROOT%{_libdir}
 	cp -d lib/lib$name/lib$name.so.* $RPM_BUILD_ROOT%{_libdir}
 done
 
-install -d $RPM_BUILD_ROOT%{_mandir}/man7
 install xview.man $RPM_BUILD_ROOT%{_mandir}/man7/xview.7
 
-install -d $RPM_BUILD_ROOT%{_includedir}
 for dir in olgx olgx_private xview xview_private pixrect; do
 	cp -aL build/include/$dir $RPM_BUILD_ROOT%{_includedir}
 done
 
-install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -ar contrib/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
+%post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libolgx.so.*
-%attr(755,root,root) %{_libdir}/libxview.so.*
+%attr(755,root,root) %{_libdir}/libolgx.so.*.*
+%attr(755,root,root) %{_libdir}/libxview.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %{_mandir}/man7/xview.7.*
-%{_includedir}/olgx/*.h
-%{_includedir}/olgx_private/*.h
-%{_includedir}/pixrect/*.h
-%{_includedir}/xview/*.h
-%{_includedir}/xview_private/*.h
+%{_includedir}/olgx
+%{_includedir}/olgx_private
+%{_includedir}/pixrect
+%{_includedir}/xview
+%{_includedir}/xview_private
 
 %files static
 %defattr(644,root,root,755)
