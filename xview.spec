@@ -13,7 +13,6 @@ Patch0:		%{name}_%{version}-14.diff.gz
 #original:
 #Source0:	ftp://sunsite.unc.edu/pub/Linux/libs/X/xview/xview-3.2p1.4.src.tar.gz
 BuildRequires:	XFree86-devel
-Icon:		xv.xpm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
