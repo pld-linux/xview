@@ -1,11 +1,22 @@
 Summary:	XView libraries for X11
+Summary(pl):	Biblioteki XView dla X11
 Name:		xview
 Version:	3.2p1.4
 Release:	1
 License:	GPL
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
+Group(fr):	Development/Librairies
+Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
+Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
+# probably taken from Debian, repacked to .bz2
 Source0:	%{name}_%{version}.orig.tar.bz2
 Patch0:		%{name}_%{version}-13.diff.bz2
+#original:
+#Source0:	ftp://sunsite.unc.edu:/pub/Linux/libs/X/xview/xview-3.2p1.4.src.tar.gz
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,37 +37,64 @@ It is possible that the openwin desktop takes up much less disk space
 to install and memory to run than modern desktops, which would make it
 a good candidate for old hardware.
 
+%description -l pl
+XView dostarcza zestaw obiektÛw interfejsu uøytkownika takich jak
+scrollbary, menu, panele kontrolne. Zachowanie i funkcjonalno∂Ê tych
+obiektÛw jest zgodna ze specyfikacj± OPEN LOOK GUI.
+
+XView to implementacja Suna standardu OpenLook. Pomimo wieku i
+wyparcia przez Motifa czy gtk, jest nadal uøyteczna, zw≥aszcza do
+zapewnienia kompatybilno∂ci ze starymi programami.
 
 %package clients
-Summary:	OpenWindows clients.
+Summary:	OpenWindows clients
+Summary(pl):	Klienci OpenWindows
 Group:		X11/Window Managers
+Group(de):	X11/Fenstermanager
+Group(pl):	X11/Zarz±dcy Okien
 Requires:	%{name} = %{version}
 
 %description clients
-A number of clients and utilties for OpenWindows : clock, textedit,
+A number of clients and utilties for OpenWindows: clock, textedit,
 cmdtool, shelltool, owplaces and props.
 
+%description clients -l pl
+Zestaw klientÛw i narzÍdzi dla OpenWindows: clock, textedit, cmdtool,
+shelltool, owplaces i props.
 
 %package devel
 Summary:	Header files and static libraries for XView development
+Summary(pl):	Pliki nag≥Ûwkowe i biblioteki statyczne XView
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-Requires:	%{name}
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
+Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
+Requires:	%{name} = %{version}
 
 %description devel
 All the files needed to develop applications that, using the XView
-libraries, meet the Open Look interface specifications.
+libraries, meet the OpenLook interface specifications.
 
+%description devel -l pl
+Wszystko co potrzebne do tworzenia aplikacji korzystaj±cych z
+bibliotek XView, zgodnych ze specyfikacj± interfejsu OpenLook.
 
 %package examples
-Summary:	A number of example programs and tutorials for the XView libraries.
+Summary:	A number of example programs and tutorials for the XView libraries
+Summary(pl):	Przyk≥adowe programy i dokumentacja do bibliotek XView
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-Requires:	%{name}-devel
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
+Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
+Requires:	%{name}-devel = %{version}
 
 %description examples
 Sample programs - with source code - that cover the basics of XView
@@ -65,31 +103,50 @@ programming are included in this package.
 Also includes documents on the XView API (Application Programming
 Interface).
 
+%description examples -l pl
+Przyk≥adowe programy - wraz z kodem ºrÛd≥owym - pokazuj±ce podstawy
+programowania z uøyciem XView. Pakiet zawiera teø dokumentacjÍ API
+XView.
 
 %package -n olwm
 Summary:	OpenLook Window Manager
+Summary(pl):	Zarz±dca okien OpenLook
 Group:		X11/Window Managers
-Requires:	xview = %{version}
+Group(de):	X11/Fenstermanager
+Group(pl):	X11/Zarz±dcy Okien
+Requires:	%{name} = %{version}
 
 %description -n olwm
 This package contains the traditional Open Look Window Manager. For an
 extended version that offers virtual desktops, have a look at the
 package olvwm.
 
+%description -n olwm -l pl
+Ten pakiet zawiera tradycyjny OpenLook Window Manager. Rozszerzona
+wersja oferuj±ca wirtualne desktopy znajduje siÍ w pakiecie olvwm.
+
 %package -n olvwm
 Summary:	OpenLook Virtual Window Manager
+Summary(pl):	Wirtualny zarz±dca okien OpenLook
 Version:	4.1
 Group:		X11/Window Managers
-Requires:	xview = %{version}
+Group(de):	X11/Fenstermanager
+Group(pl):	X11/Zarz±dcy Okien
+Requires:	%{name] = %{version}
 
 %description -n olvwm
 This package contains an extended version of olwm, the original
 OpenLook window manager, enhanced for handling of virtual desktops
 with support for 24-bit color modes.
 
+%description -n olvwm -l pl
+Ten pakiet zawiera wersjÍ olwm (OpenLook Window Manager) rozszerzon± o
+obs≥ugÍ wirtualnych desktopÛw, takøe w trybach z 24-bitowym kolorem.
+
 %prep
 %setup -q
-%patch -p1 -b .orig
+%patch -p1
+
 %build
 rm -f make
 IMAKEINCLUDE="-I$RPM_BUILD_DIR/%name-%version/config -I%{_libdir}/X11/config"
@@ -122,13 +179,13 @@ for file in text_extras_menu textswrc ttyswrc; do \
 done
 	
 install -d $RPM_BUILD_ROOT%{_mandir}/man7
-mv $RPM_BUILD_ROOT%{_mandir}/man1/xview.1x $RPM_BUILD_ROOT%{_mandir}/man7/xview.7x
+mv -f $RPM_BUILD_ROOT%{_mandir}/man1/xview.1x $RPM_BUILD_ROOT%{_mandir}/man7/xview.7x
 
 install contrib/misc/owplaces $RPM_BUILD_ROOT%{_bindir}
 install contrib/misc/openwin  $RPM_BUILD_ROOT%{_bindir}
 
 for file in clock cmdtool shelltool textedit; do \
-	  mv $RPM_BUILD_ROOT%{_mandir}/man1/$file.1x $RPM_BUILD_ROOT%{_mandir}/man1/$file.1; \
+	  mv -f $RPM_BUILD_ROOT%{_mandir}/man1/$file.1x $RPM_BUILD_ROOT%{_mandir}/man1/$file.1; \
 done
 
 install -D contrib/misc/props-locale.C $RPM_BUILD_ROOT%{_datadir}/locale/C/props/C
@@ -138,18 +195,18 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 install $RPM_BUILD_ROOT%{_datadir}/src/xview/examples/bin/* $RPM_BUILD_ROOT%{_libdir}/%{name}-%{version}
 	
 for file in olwm olwmslave; do \
-	mv $RPM_BUILD_ROOT%{_mandir}/man1/$file.1x $RPM_BUILD_ROOT%{_mandir}/man1/$file.1; \
+	mv -f $RPM_BUILD_ROOT%{_mandir}/man1/$file.1x $RPM_BUILD_ROOT%{_mandir}/man1/$file.1; \
 done
 
 for file in olvwm olvwmrc; do \
-	  mv $RPM_BUILD_ROOT%{_mandir}/man1/$file.1x $RPM_BUILD_ROOT%{_mandir}/man1/$file.1; \
+	  mv -f $RPM_BUILD_ROOT%{_mandir}/man1/$file.1x $RPM_BUILD_ROOT%{_mandir}/man1/$file.1; \
 done
-
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
 
 %clean 
 rm -rf $RPM_BUILD_ROOT
+
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
