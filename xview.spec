@@ -5,7 +5,7 @@ Summary:	XView libraries for X11
 Summary(pl):	Biblioteki XView dla X11
 Name:		xview
 Version:	%{xview_ver}
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
@@ -18,7 +18,7 @@ Group(uk):	Розробка/Б╕бл╕отеки
 Source0:	%{name}_%{version}.orig.tar.gz
 Patch0:		%{name}_%{version}-14.diff.gz
 #original:
-#Source0:	ftp://sunsite.unc.edu:/pub/Linux/libs/X/xview/xview-3.2p1.4.src.tar.gz
+#Source0:	ftp://sunsite.unc.edu/pub/Linux/libs/X/xview/xview-3.2p1.4.src.tar.gz
 BuildRequires:	XFree86-devel
 Icon:		xv.xpm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -128,7 +128,7 @@ cd config
 imake -DUseInstalled
 cd ..
 xmkmf -a
-%{__make} CFLAGS=="%{rpmcflags}"
+%{__make} CCOPTIONS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
