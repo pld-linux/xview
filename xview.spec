@@ -10,12 +10,11 @@ Source:		ftp://sunsite.unc.edu/pub/X11/contrib/libraries/%name%version-X11R6.tar
 Patch:		xview-config.patch
 #BuildRequires:	
 #Requires:	
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	_prefix	/usr/X11R6
 
 %description
-
 
 %description -l pl
  # optional package =====================
@@ -27,7 +26,6 @@ Group:		XXX
 Group(pl):	XXX
 
 %description devel
-
 
 %description -l pl devel
  # end of optional package ==============
@@ -46,7 +44,6 @@ imake -DUseInstalled $IMAKEINCLUDE
 cd ..
 xmkmf -a
 make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" World
-
 
 %install
 rm -rf $RPM_BUILD_ROOT
