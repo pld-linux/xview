@@ -11,6 +11,7 @@ Group:		Development/Libraries
 #original:
 #Source0:	ftp://sunsite.unc.edu/pub/Linux/libs/X/xview/xview-3.2p1.4.src.tar.gz
 Source0:	%{name}_%{version}.orig.tar.gz
+# Source0-md5:	b9ff26d6ad378af320bac45154ceaeba
 Patch0:		%{name}_%{version}-14.diff.gz
 Patch1:		%{name}-ansi.patch
 BuildRequires:	XFree86-devel
