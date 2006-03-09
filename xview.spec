@@ -1,6 +1,4 @@
-
 %define		xview_ver	3.2p1.4
-
 Summary:	XView libraries for X11
 Summary(pl):	Biblioteki XView dla X11
 Name:		xview
@@ -99,7 +97,7 @@ imake -DUseInstalled
 cd ..
 xmkmf -a
 %{__make} \
-	CC=%{__cc} \
+	CC="%{__cc}" \
 	CCOPTIONS="%{rpmcflags}"
 
 %install
