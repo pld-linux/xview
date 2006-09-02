@@ -118,7 +118,7 @@ done
 ln -sf libolgx.so.3.2.4 $RPM_BUILD_ROOT%{_libdir}/libolgx.so
 ln -sf libxview.so.3.2.4 $RPM_BUILD_ROOT%{_libdir}/libxview.so
 
-cp -ar contrib/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a contrib/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
