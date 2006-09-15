@@ -135,7 +135,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libolgx.so
 %attr(755,root,root) %{_libdir}/libxview.so
-%{_mandir}/man7/xview.7.*
+%{_mandir}/man7/xview.7*
 %{_includedir}/olgx
 %{_includedir}/olgx_private
 %{_includedir}/pixrect
