@@ -1,0 +1,4 @@
+- use CC=%{__cc} during compile,
+- fixes in %files,
+- do not include SOANAMe symlinks in main package,
+- minor changes.
