@@ -1,0 +1,5 @@
+- spec rewritten, include only libraries in package
+  (I think nobody uses olvm now, true?), it's hard to make build all
+  programs, so it would be better to have building and working
+  libraries, OK?
+- release 2
