@@ -14,7 +14,6 @@ URL:		http://step.polymtl.ca/~coyote/xview_main.html
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 XView provides a set of pre-built, user-interface objects such as
 canvases, scrollbars, menus, and control panels. The appearance and
@@ -43,7 +42,7 @@ zapewnienia kompatybilno¶ci ze starymi programami.
 Summary:	Header files for XView development
 Summary(pl):	Pliki nag³ówkowe XView
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 All the files needed to develop applications that, using the XView
@@ -57,7 +56,7 @@ bibliotek XView, zgodnych ze specyfikacj± interfejsu OpenLook.
 Summary:	Static libraries for XView development
 Summary(pl):	Biblioteki statyczne XView
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description static
 Static libraries for XView development
@@ -69,7 +68,7 @@ Biblioteki statyczne XView
 Summary:	A number of example programs and tutorials for the XView libraries
 Summary(pl):	Przyk³adowe programy i dokumentacja do bibliotek XView
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description examples
 Sample programs - with source code - that cover the basics of XView
