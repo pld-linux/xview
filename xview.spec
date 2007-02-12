@@ -1,6 +1,6 @@
 %define		xview_ver	3.2p1.4
 Summary:	XView libraries for X11
-Summary(pl.UTF-8):   Biblioteki XView dla X11
+Summary(pl.UTF-8):	Biblioteki XView dla X11
 Name:		xview
 Version:	%{xview_ver}
 Release:	6
@@ -40,7 +40,7 @@ zapewnienia kompatybilności ze starymi programami.
 
 %package devel
 Summary:	Header files for XView development
-Summary(pl.UTF-8):   Pliki nagłówkowe XView
+Summary(pl.UTF-8):	Pliki nagłówkowe XView
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -54,7 +54,7 @@ bibliotek XView, zgodnych ze specyfikacją interfejsu OpenLook.
 
 %package static
 Summary:	Static libraries for XView development
-Summary(pl.UTF-8):   Biblioteki statyczne XView
+Summary(pl.UTF-8):	Biblioteki statyczne XView
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -66,7 +66,7 @@ Biblioteki statyczne XView
 
 %package examples
 Summary:	A number of example programs and tutorials for the XView libraries
-Summary(pl.UTF-8):   Przykładowe programy i dokumentacja do bibliotek XView
+Summary(pl.UTF-8):	Przykładowe programy i dokumentacja do bibliotek XView
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
