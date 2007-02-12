@@ -1,6 +1,6 @@
 %define		xview_ver	3.2p1.4
 Summary:	XView libraries for X11
-Summary(pl):	Biblioteki XView dla X11
+Summary(pl.UTF-8):   Biblioteki XView dla X11
 Name:		xview
 Version:	%{xview_ver}
 Release:	6
@@ -29,18 +29,18 @@ It is possible that the openwin desktop takes up much less disk space
 to install and memory to run than modern desktops, which would make it
 a good candidate for old hardware.
 
-%description -l pl
-XView dostarcza zestaw obiektÛw interfejsu uøytkownika takich jak
-scrollbary, menu, panele kontrolne. Zachowanie i funkcjonalno∂Ê tych
-obiektÛw jest zgodna ze specyfikacj± OPEN LOOK GUI.
+%description -l pl.UTF-8
+XView dostarcza zestaw obiekt√≥w interfejsu u≈ºytkownika takich jak
+scrollbary, menu, panele kontrolne. Zachowanie i funkcjonalno≈õƒá tych
+obiekt√≥w jest zgodna ze specyfikacjƒÖ OPEN LOOK GUI.
 
 XView to implementacja Suna standardu OpenLook. Pomimo wieku i
-wyparcia przez Motifa czy gtk, jest nadal uøyteczna, zw≥aszcza do
-zapewnienia kompatybilno∂ci ze starymi programami.
+wyparcia przez Motifa czy gtk, jest nadal u≈ºyteczna, zw≈Çaszcza do
+zapewnienia kompatybilno≈õci ze starymi programami.
 
 %package devel
 Summary:	Header files for XView development
-Summary(pl):	Pliki nag≥Ûwkowe XView
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe XView
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -48,25 +48,25 @@ Requires:	%{name} = %{version}-%{release}
 All the files needed to develop applications that, using the XView
 libraries, meet the OpenLook interface specifications.
 
-%description devel -l pl
-Wszystko co potrzebne do tworzenia aplikacji korzystaj±cych z
-bibliotek XView, zgodnych ze specyfikacj± interfejsu OpenLook.
+%description devel -l pl.UTF-8
+Wszystko co potrzebne do tworzenia aplikacji korzystajƒÖcych z
+bibliotek XView, zgodnych ze specyfikacjƒÖ interfejsu OpenLook.
 
 %package static
 Summary:	Static libraries for XView development
-Summary(pl):	Biblioteki statyczne XView
+Summary(pl.UTF-8):   Biblioteki statyczne XView
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description static
 Static libraries for XView development
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne XView
 
 %package examples
 Summary:	A number of example programs and tutorials for the XView libraries
-Summary(pl):	Przyk≥adowe programy i dokumentacja do bibliotek XView
+Summary(pl.UTF-8):   Przyk≈Çadowe programy i dokumentacja do bibliotek XView
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -77,9 +77,9 @@ programming are included in this package.
 Also includes documents on the XView API (Application Programming
 Interface).
 
-%description examples -l pl
-Przyk≥adowe programy - wraz z kodem ºrÛd≥owym - pokazuj±ce podstawy
-programowania z uøyciem XView. Pakiet zawiera teø dokumentacjÍ API
+%description examples -l pl.UTF-8
+Przyk≈Çadowe programy - wraz z kodem ≈∫r√≥d≈Çowym - pokazujƒÖce podstawy
+programowania z u≈ºyciem XView. Pakiet zawiera te≈º dokumentacjƒô API
 XView.
 
 %prep
