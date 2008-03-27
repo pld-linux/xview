@@ -3,7 +3,7 @@ Summary:	XView libraries for X11
 Summary(pl.UTF-8):	Biblioteki XView dla X11
 Name:		xview
 Version:	%{xview_ver}
-Release:	6
+Release:	7
 License:	GPL
 Group:		Development/Libraries
 Source0:	ftp://step.polymtl.ca/pub/Xview/libs/xview/Xview-%{version}/%{name}-%{version}.src.tar.gz
