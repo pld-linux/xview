@@ -3,7 +3,7 @@ Summary:	XView libraries for X11
 Summary(pl.UTF-8):	Biblioteki XView dla X11
 Name:		xview
 Version:	%{xview_ver}
-Release:	8
+Release:	9
 License:	GPL
 Group:		Development/Libraries
 Source0:	ftp://step.polymtl.ca/pub/Xview/libs/xview/Xview-%{version}/%{name}-%{version}.src.tar.gz
@@ -11,11 +11,13 @@ Source0:	ftp://step.polymtl.ca/pub/Xview/libs/xview/Xview-%{version}/%{name}-%{v
 # http://ftp.debian.org/debian/pool/main/x/xview/
 Patch0:		%{name}_%{version}-21.1.diff.gz
 URL:		http://step.polymtl.ca/~coyote/xview_main.html
+BuildRequires:	xorg-cf-files
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXpm-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xproto-devel
+BuildRequires:	xorg-util-imake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
