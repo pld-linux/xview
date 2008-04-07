@@ -136,6 +136,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libolgx.so.*.*
 %attr(755,root,root) %{_libdir}/libxview.so.*.*
+%attr(755,root,root) %ghost %{_libdir}/libolgx.so.3
+%attr(755,root,root) %ghost %{_libdir}/libxview.so.3
 
 %files devel
 %defattr(644,root,root,755)
