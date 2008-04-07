@@ -17,6 +17,7 @@ BuildRequires:	xorg-lib-libXpm-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xproto-devel
+BuildRequires:	xorg-util-gccmakedep
 BuildRequires:	xorg-util-imake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
