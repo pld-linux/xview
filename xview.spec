@@ -95,7 +95,7 @@ XView.
 %build
 rm -f make
 # now macro version shows 4.1 - olvm version, must use another macro - xview_ver
-IMAKEINCLUDE="-I$RPM_BUILD_DIR/%{name}-%{xview_ver}/config -I%{_prefix}/X11R6/lib/X11/config"
+IMAKEINCLUDE="-I$RPM_BUILD_DIR/%{name}-%{xview_ver}/config -I%{_prefix}/lib/X11/config"
 export IMAKEINCLUDE
 cd config
 imake -DUseInstalled
