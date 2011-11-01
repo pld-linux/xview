@@ -8,8 +8,8 @@ License:	GPL
 Group:		Development/Libraries
 Source0:	ftp://step.polymtl.ca/pub/Xview/libs/xview/Xview-%{version}/%{name}-%{version}.src.tar.gz
 # Source0-md5:	b9ff26d6ad378af320bac45154ceaeba
-# http://ftp.debian.org/debian/pool/main/x/xview/
-Patch0:		%{name}_%{version}-21.1.diff.gz
+Patch0:		ftp://ftp.debian.org/debian/pool/main/x/xview/%{name}_%{version}-25.diff.gz
+# Patch0-md5:	215985b45696627d5808a3af3687c774
 URL:		http://step.polymtl.ca/~coyote/xview_main.html
 BuildRequires:	xorg-cf-files
 BuildRequires:	xorg-lib-libX11-devel
